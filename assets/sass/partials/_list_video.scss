@@ -1,0 +1,68 @@
+$ngSocializePadding: 10px;
+
+.ng-socialize-list-video {
+  margin-top: $ngSocializePadding;
+
+  .ng-socialize-list-item {
+    position: relative;
+
+    $shadow: 1px 1px 5px 1px #EDEDED;
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    &:after, &:before {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    .ng-socialize-list-item-thumbnail {
+      position: relative;
+      float: left;
+      width: 158px;
+      margin-right: $ngSocializePadding;
+      img {
+        width: 100%;
+      }
+    }
+
+    .ng-socialize-list-item-content {
+      padding: $ngSocializePadding;
+      .ng-socialize-list-item-content-title {
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: bold;
+        + .ng-socialize-list-item-content-description {
+          margin: 5px 0 0;
+          font-size: 0.8em;
+          color: #999;
+        }
+      }
+    }
+    + .ng-socialize-list-item {
+      margin-top: $ngSocializePadding;
+    }
+
+    .ng-socialize-list-item-domain {
+      position: absolute;
+      right: 10;
+      bottom: 10;
+      text-transform: uppercase;
+      color: #999;
+    }
+  }
+}
+
+.video-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

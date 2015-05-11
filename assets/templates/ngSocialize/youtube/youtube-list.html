@@ -1,0 +1,18 @@
+<section class="ng-socialize-list-video" ng-if="socializeItems.youTube.length">
+    <div class="ng-socialize-list-item" ng-show="youTubeSnippet" ng-repeat="youTubeId in socializeItems.youTube" ng-controller="SocializeYouTubeItemCtrl">
+        <div class="ng-socialize-list-item-thumbnail">
+            <div class="play_border" ng-click="showVideoModal()">
+                <div class="play_button"></div>
+            </div>
+            <img ng-src="{{ youTubeSnippet.thumbnails.default.url }}">
+        </div>
+        <div class="ng-socialize-list-item-content">
+            <h2 class="ng-socialize-list-item-content-title">{{ youTubeSnippet.title }}</h2>
+            <p class="ng-socialize-list-item-content-description" ng-if="youTubeSnippet.description">
+                {{ youTubeSnippet.description | characters:80 }}
+            </p>
+        </div>
+        <small class="ng-socialize-list-item-domain">youtube.com</small>
+        <ng-include src="'ngSocialize/youtube/youtube-modal.html'" ng-if="youTubeSnippet.isActive"></ng-include>
+    </div>
+</section>

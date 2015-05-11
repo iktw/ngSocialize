@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'path',
+1 verbose cli   'gulp-watch',
+1 verbose cli   'gulp-concat',
+1 verbose cli   'gulp-uglify',
+1 verbose cli   'gulp-compass',
+1 verbose cli   'gulp-rename',
+1 verbose cli   'gulp-angular-templates',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 error Failed to parse json
+4 error Unexpected end of input
+5 error File: /Users/Mohammed/Code/ng-socialize/package.json
+6 error Failed to parse package.json data.
+6 error package.json must be actual JSON, not just JavaScript.
+6 error
+6 error This is not a bug in npm.
+6 error Tell the package author to fix their package.json file. JSON.parse
+7 error System Darwin 14.0.0
+8 error command "node" "/usr/local/bin/npm" "install" "path" "gulp-watch" "gulp-concat" "gulp-uglify" "gulp-compass" "gulp-rename" "gulp-angular-templates" "--save-dev"
+9 error cwd /Users/Mohammed/Code/ng-socialize
+10 error node -v v0.10.33
+11 error npm -v 1.4.28
+12 error file /Users/Mohammed/Code/ng-socialize/package.json
+13 error code EJSONPARSE
+14 verbose exit [ 1, true ]
