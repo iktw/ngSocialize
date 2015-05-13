@@ -89,3 +89,29 @@
   align-items: center;
   justify-content: center;
 }
+.video-modal-wrapper .video-modal-inner {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 390px;
+}
+.video-modal-wrapper .video-modal-inner .video-modal-close {
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 5px 14px;
+}
+.video-modal-wrapper .video-modal-inner iframe {
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
