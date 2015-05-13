@@ -1,10 +1,14 @@
 angular.module('ngSocialize')
     .controller('SocializeYouTubeItemCtrl',
-    function ($scope, $log, SocializeYouTubeService, $filter) {
+    function ($scope, $log, SocializeYouTubeService) {
         $scope.youTubeSnippet = null;
 
         $scope.showVideoModal = function () {
             $scope.youTubeSnippet.isActive = true
+        };
+
+        $scope.closeVideoModal = function () {
+            $scope.youTubeSnippet.isActive = false
         };
 
         SocializeYouTubeService.getVideoMeta($scope.youTubeId)
