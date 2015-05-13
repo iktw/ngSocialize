@@ -5,29 +5,33 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     compass = require('gulp-compass'),
+    ngAnnotate = require('gulp-ng-annotate'),
     rename = require('gulp-rename'),
+    minifyCSS = require('gulp-minify-css'),
     angularTemplates = require('gulp-angular-templates');
 
 var application_name = 'ngSocialize';
 
 gulp.task('build-js', function () {
     gulp.src('assets/js/**/*.js')
+        .pipe(ngAnnotate())
         .pipe(concat(application_name + '.js'))
         .pipe(rename({suffix: '.min'}))
-//        .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('build-compass', function () {
-    gulp.src('assets/sass/**/*.scss').
-        pipe(compass({
+    gulp.src('assets/sass/**/*.scss')
+        .pipe(compass({
             config_file: 'config.rb',
             css: 'dist/css/',
             sass: 'assets/sass'
-        })).
-        pipe(concat(application_name + '.css')).
-        pipe(rename({suffix: '.min'})).
-        pipe(gulp.dest('dist/css'));
+        }))
+        .pipe(concat(application_name + '.css'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifyCSS({}))
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('build-angular-templates', function () {

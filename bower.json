@@ -1,0 +1,26 @@
+{
+  "name": "ng-socialize",
+  "version": "1.0.0",
+  "authors": [
+    "Mohammed Hammoud <mohammed@iktw.se>"
+  ],
+  "description": "Angular socialize directive",
+  "main": "dist/js/ngSocialize.min.js",
+  "keywords": [
+    "angular",
+    "directive",
+    "socialize",
+    "media"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}
