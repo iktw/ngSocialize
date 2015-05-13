@@ -1,5 +1,6 @@
-<div class="video-modal-wrapper">
-    <div class="video-modal-inner">
-        <iframe width="420" height="315" src="{{ youTubeSnippet.embedUrl }}"></iframe>
+<div class="video-modal-wrapper" ng-click="closeVideoModal();">
+    <div class="video-modal-inner" ng-click="$event.preventDefault();">
+        <div class="video-modal-close">x</div>
+        <iframe id="ytplayer" type="text/html" ng-src="{{ youTubeSnippet.embedUrl }}" frameborder="0"/>
     </div>
 </div>

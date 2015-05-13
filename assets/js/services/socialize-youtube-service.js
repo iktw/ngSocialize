@@ -1,6 +1,6 @@
 angular.module('ngSocialize')
     .service('SocializeYouTubeService',
-    function (SocializeService, $http, ngSocialize) {
+    function (SocializeService, $http, $sce, ngSocialize) {
         return {
             getVideoMeta: function (id) {
                 var api_key = ngSocialize.youTubeAPIKey;
@@ -8,7 +8,7 @@ angular.module('ngSocialize')
                 return $http.get(url);
             },
             getEmbedUrl: function (id) {
-                return 'http://www.youtube.com/embed/' + id + '?autoplay=1';
+                return $sce.trustAsResourceUrl('http://www.youtube.com/embed/' + id + '?autoplay=1');
             },
             getIds: function (urls) {
                 var regex = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.&v=))((\w|-){11})(?:\S)?$/;
